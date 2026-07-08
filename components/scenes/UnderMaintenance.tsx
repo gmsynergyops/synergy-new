@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const UnderMaintenance = () => {
   return (
@@ -28,7 +28,7 @@ const UnderMaintenance = () => {
                         While this page is getting a little TLC, our medical team is here and ready to care for you. 
                     </p>
                     <p className="opacity-70 leading-relaxed">
-                        We are currently performing routine maintenance to make our online experience smoother. Don&apos;t worry, this doesn&apos;t affect our hospital operations—we are fully open and available to assist you.
+                        We are currently performing routine maintenance to make our online experience smoother. Don't worry, this doesn't affect our hospital operations—we are fully open and available to assist you.
                     </p>
                 </div>
 
