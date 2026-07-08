@@ -54,16 +54,16 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email address").optional(),
   message: z.string().optional(),
   department: z.string({
-    required_error: "Please select a department",
+    message: "Please select a department",
   }).optional(),
   selectedDoctor: z.string({
-    required_error: "Please select a doctor",
+    message: "Please select a doctor",
   }).optional(),
   appointmentDate: z.date({
-    required_error: "Please select a date for your appointment",
+    message: "Please select a date for your appointment",
   }).optional(),
   timeSlot: z.string({
-    required_error: "Please select a time slot",
+    message: "Please select a time slot",
   }).optional(),
   insurance: z.string().optional(),
   emergency: z.boolean().default(false).optional(),

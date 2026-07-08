@@ -108,7 +108,7 @@ export function Navbar() {
                 aria-label="Main navigation"
                 role="navigation"
                 className={cn(
-                    "hidden md:flex h-full font-display items-center justify-between px-6 w-full max-w-full transition-all duration-300",
+                    "hidden relative md:flex h-full font-display items-center justify-between px-6 w-full max-w-full transition-all duration-300",
                     result ? "text-black" : "text-white"
                 )}
             >
@@ -129,16 +129,16 @@ export function Navbar() {
                 </div>
                 <NavigationMenuList className="w-full flex items-center justify-evenly lg:space-x-4 space-x-0">
                     {menuItems.map((item, index) => (
-                        <React.Fragment key={index}>
+                        <div className="w-full flex items-center justify-center" key={index}>
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger
                                     onMouseEnter={() => setActivePageIndex(0)}
-                                    className="xl:px-4 md:px-2 px-0! py-2 uppercase font-medium! font-display lg:text-base text-xs"
+                                    className="xl:px-4 md:px-2 px-0! py-2 uppercase font-medium! font-display lg:text-base text-xs "
                                 >
                                     {item.label}
                                 </NavigationMenuTrigger>
 
-                                <NavigationMenuContent className="xl:min-w-7xl lg:min-w-6xl md:min-w-5xl w-full bg-slate-50 flex items-center justify-center p-0 outline-none! ring-0! border-none! rounded-none! min-h-[450px] h-full ">
+                                <NavigationMenuContent className="xl:min-w-7xl lg:min-w-6xl md:min-w-5xl bg-slate-50 flex items-center justify-center p-0 outline-none! ring-0! border-none! rounded-none! min-h-[450px] h-full absolute left-1/2 -translate-x-1/2">
                                     <AnimatePresence>
                                         <motion.div
                                             initial="hidden"
@@ -288,7 +288,7 @@ export function Navbar() {
                                     </AnimatePresence>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                        </React.Fragment>
+                        </div>
                     ))}
                 </NavigationMenuList>
                 <div className="w-1/4 flex items-center justify-end gap-4">

@@ -45,7 +45,7 @@ export function AppointmentCard({ appointment, onSelect }: AppointmentCardProps)
                         <Badge
                             variant={
                                 appointment.status === "confirmed"
-                                    ? "success"
+                                    ? "default"
                                     : appointment.status === "cancelled"
                                         ? "destructive"
                                         : "outline"
